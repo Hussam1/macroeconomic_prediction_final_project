@@ -1,7 +1,18 @@
 
 # Macroeconomic forecasting using machine learning methods
 ---
-This folder contains all the relevant notebooks covering the end-to-end workflow to build a prediction system to predict future macroeconomic variables of select countries under stress scenario, these predictions will eventually be used as an input stress test exercise
+This folder contains all the relevant notebooks covering the building of end-to-end prediction system to forecats macroeconomic variables of selected countries under so-called "Stress Scenario" - please read the purpose for more details.
+folders:
+- Final Presenation: contain final presentation of project and its step-by-step approach
+- notebooks: all notebooks, including the ones we used to test other appraoch using both:
+	- IMF annual data
+	- FRED quarterly data
+
+**for the final approach presented in the slides**:
+
+- annual_imf_all_countries_FULL_RUN.ipynb
+- annual_imf_all_countries_fbProphet.ipynb
+- annual_imf_all_counties_timeSeries_clustering_Regression.ipynb
 
 
 # Authors
