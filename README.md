@@ -1,58 +1,57 @@
-# Telecom customer's churn using machine learning
+
+# Macroeconomic forecasting using machine learning methods
+---
+This folder contains all the relevant notebooks covering the end-to-end workflow to build a prediction system to predict future macroeconomic variables of select countries under stress scenario, these predictions will eventually be used as an input stress test exercise
 
 
-## Summary
-
-**Motivation:** As part of my data science bootcamps projects, we intent to perform "customer churn modeling" for company within the telecom industry
-<br />
-<br />**Goal:** The goal is to test and train multiple machine learning models in order to select the one with most valid business case
-<br />
-<br />**Business Case:** The company will be using this model to predict customers at risk of churning. hypothetical case was:
-<br />1- The contract's life time value is 1000$
-<br />2- Customers at risk of churning will be called and offered 10% discount if they maintain/continue their contract
-<br />3- based on the model results, what is the net effect on the company's income statement
-<br />
-<br />**Next Steps:** 
-<br />- Test if customer's location has any impact on customer's behaviour
-<br />- Test if manipulating correlated features will have impact on customer's behaviour and subsequently churning rate
-<br />- Expand more on hyperparameter tuning
-<br />- Expand more on feature importance and selection
-<br />![img!](img/feature_importance.jpg)
+# Authors
+---
+- [Patrizia Will](https://www.linkedin.com/in/patrizia-will/)
+- [Hussam Al-Homsi](https://www.linkedin.com/in/hussam-al-homsi/)
 
 
-## Introduction
-The approach was as following
+# Supervisors
+---
+- [Ekaterina Butyugina](https://www.linkedin.com/in/ekaterina-butyugina/)
+- [ansam zedan](https://www.linkedin.com/in/ansam-zedan/)
+- [Dipanjan (DJ) Sarkar](https://www.linkedin.com/in/dipanzan/)
 
-![img!](img/approach.JPG)
 
+# Purpose
+---
+Build Machine learning models capable of predicting macroeconomic variables in so-called "stress situations" ultimately it will be used as an input to a "Stress Test Exercise" within banking industry.
 
+Stress test is an exercise aim to test bank‘s capital adequacy in times of economic shock (or stressful situation). In another word, if the economy collapsed or went into recession and people started losing their jobs/income how long can the bank‘s capital carry it forward.
+Two type of inputs need to perform such stress exercise: 
+- Bank‘s own financial data
+- Projection of economic variables in stress condition (for all the countries that the bank has exposure to)
 
-## Models tested
-The following Machine learning models were tested:
+To learn more about stress testing exercise and its importance in stabilizing economies check this link: [UK Central Bank Demo](https://www.bankofengland.co.uk/stress-testing)
 
-<br />- Logistic Regression
-<br />- SVM
-<br />- KNN
-<br />- RandomForest
-<br />- AdaBoost
-<br />- Gradient Boost
-<br />- Decision Tree
-<br />- XGBoost
-<br />- PyCaret classification module
+The issue is not all countries publicly disclose their projections to what their economic variables can look like in stressful scenario. Our project tasks is: Given that we have some projections to few countries, how can we predict the unavailable projections.
+
+![img](img/Background.JPG)
 
 
 
-## Model chosen:
-
-Logistic Regression with the following results:
-
-![img!](img/confusion_matrix.jpg)
-<br />![img!](img/classification_report.jpg)
-<br />![img!](img/roc_curve.jpg)
+# Data
+---
+Publicly available International Monetary Fund Database, [Full Dataset is here](https://www.imf.org/en/Data)
 
 
 
-## Business Case clarification:
-![img!](img/business_case.JPG)
 
+# Example Results
+---
+![img](img/GDP_time_series_clusters.png)
+![img](img/GrangerCausalityTest_GDP.JPG)
+![img](img/target_vs_user_inputed.JPG)
+![img](img/historical_performace_canadaGDP_vs_prediction.JPG)
+
+### In This Example:
+- Target Country is **Canada**
+- Target Macroeconomic Variable: **GDP**
+- **Granger Causality Test** to filter out countries with weak predictive power toward our target country/economic variable
+- Forecasting performance: Assuming the user were able to obtain only UK GDP preojection and would like to use it as input to guid the prediction of canadaian GDP under **Stress Scenario**
+- Historical Performance 
 
