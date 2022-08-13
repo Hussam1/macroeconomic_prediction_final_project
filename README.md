@@ -63,6 +63,6 @@ Publicly available International Monetary Fund Database, [Full Dataset is here](
 - Target Country is **Canada**
 - Target Macroeconomic Variable: **GDP**
 - **Granger Causality Test** to filter out countries with weak predictive power toward our target country/economic variable
-- Forecasting performance: Assuming the user were able to obtain only UK GDP preojection and would like to use it as input to guid the prediction of canadaian GDP under **Stress Scenario**
-- Historical Performance 
+- Forecasting performance: Assuming the user were able to obtain only UK GDP projection under economic stress and would like to use it as input to guid the prediction of canadaian GDP under **Stress Scenario**
+- Historical Performance: How our model would have perfomed if been used previously?
 
